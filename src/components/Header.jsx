@@ -6,6 +6,10 @@ import Link from 'next/link';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Modal from 'react-modal';
 import { IoMdAddCircleOutline } from 'react-icons/io';
+import { HiCamera } from "react-icons/hi";
+import { AiOutlineClose } from "react-icons/ai";
+
+
 
 export default function Header() {
     const { data: session } = useSession();
@@ -45,10 +49,13 @@ export default function Header() {
 
             {isOpen && (
                 <Modal isOpen={isOpen} className='max-w-lg w-[90%] p-6 absolute top-56 left-[50%] translate-x-[-50%] bg-white shadow-md border-2 rounded-md' onRequestClose={() => setIsOpen(false)} ariaHideApp = {false}>
-                    <div>
-                        <h1>Modal</h1>
-                        <button onClick={() => setIsOpen(false)}>Close</button>
+                    <div className='flex flex-col justify-center items-center h-[100%]'>
+                    <HiCamera className='text-5xl text-gray-400 cursor-pointer ' />
                     </div>
+                    <input type="text" maxLength='150' placeholder='Please enter your caption...' className='block my-4 mx-auto border-none text-center w-full focus:ring-0 outline-none'/>
+                    <button disabled className='w-full bg-red-600 text-white p-2 shadow-md rounded-lg hover:brightness-105 disabled:bg-gray-200 disabled:cursor-not-allowed disabled:brightness-100'>Upload post</button>
+                    <AiOutlineClose className='cursor-pointer absolute top-2 right-2 hover:text-red-600 transition duration-300' onClick={() => setIsOpen(false)}/>
+
                 </ Modal>
             )}
         </div>
