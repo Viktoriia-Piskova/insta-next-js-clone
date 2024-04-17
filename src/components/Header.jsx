@@ -84,12 +84,10 @@ export default function Header() {
       image: imageFileUrl,
       timestamp: serverTimestamp(),
     });
-    console.log()
     setPostUploading(false);
     setIsOpen(false);
   }
 
-  console.log(session);
   return (
     <div className="shadow-sm border-b sticky top-0 bg-white z-30 p-3">
       <div className="flex justify-between items-center max-w-6xl mx-auto">
