@@ -86,6 +86,7 @@ export default function Header() {
     });
     setPostUploading(false);
     setIsOpen(false);
+    location.reload();
   }
 
   return (
