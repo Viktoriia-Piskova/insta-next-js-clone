@@ -1,4 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Instagram Clone (React / Next.js 14)
+
+![1718983650301](https://github.com/user-attachments/assets/63a07ca7-3744-4a06-8ac1-ef5232ae313f)
+
+Tech: NextJS, Tailwind, Google Cloud, Firebase, next-auth
+
+Features:
+
+• login via Google Account
+
+• images upload (Firebase)
+
+• add posts, like, unlike, add comments
+
 
 ## Getting Started
 
